@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package service;
+
+message SetRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message GetRequest {
+  string key = 1;
+}
+
+message SetResponse {
+}
+
+message GetResponse {
+  string key = 1;
+  string value = 2;
+}
+
+message Request {
+  oneof req {
+   SetRequest set_request = 1;
+   GetRequest get_request = 2;
+  }
+}
+
+message Response {
+  oneof res {
+    SetResponse set_response = 1;
+    GetResponse get_response = 2;
+  }
+}
