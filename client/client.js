@@ -1,8 +1,8 @@
 const pb = require('./service_pb');
 
-const uri = 'ws://localhost:8080';
+const url = 'ws://localhost:8080';
 
-const sock = new WebSocket(uri);
+const sock = new WebSocket(url);
 sock.binaryType = 'arraybuffer';
 
 function set(key, value) {
