@@ -2,10 +2,16 @@
 <html>
   <head>
     <title>Protocol Buffers in the Browser</title>
-    <script src="bundle.js"></script>
   </head>
   <body>
     <p>Open the console!</p>
+    <form onsubmit="return doForm(event)">
+      <div>Name</div>
+      <input type="text" id="message" required value="Tester"/> 
+      <input type="submit" value="Go!"/>
+    </form>
   </body>
+  <script src="bundle.js"></script>
+  <script src="form.js"></script>
 </html>
 
